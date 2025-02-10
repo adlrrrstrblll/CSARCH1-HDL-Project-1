@@ -2,7 +2,7 @@
 
 module HDL_1_tb();
     reg [3:0] t_input;
-    wire t_E;
+    wire t_Output;
     integer i;
 
     HDL_1 dut(.A(t_input[3]),.B(t_input[2]),
