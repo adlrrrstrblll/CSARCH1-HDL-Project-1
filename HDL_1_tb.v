@@ -17,6 +17,10 @@ module HDL_1_tb();
     end
 
     initial begin
+        $display("Sum of Minterm: F(W,X,Y,Z) = m(0,1,8,9,10,11,12,14,15)");
+    end
+
+    initial begin
         $monitor("time = %0d, \t A= %b, B= %b, C= %b, D= %b, \t E (Output)= %b", 
                  $time, t_input[3], t_input[2], t_input[1], t_input[0], t_Output);
         $dumpfile("HDL_1.vcd");  
