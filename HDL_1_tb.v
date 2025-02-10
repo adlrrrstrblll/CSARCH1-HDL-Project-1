@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+`timescale 1ns / 1ns
 
 module HDL_1_tb();
     reg [3:0] t_input;
