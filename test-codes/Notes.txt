@@ -1,0 +1,81 @@
+Case Sensitive
+
+Constants
+    - n'b[integer]: 1'b1 = 1 OR 8'b = 00000101
+    - n'b[integer]: 2'hA9 
+        n = number of bits
+        b = number system
+
+Identifier
+    - Scalar: A, C, RUN, stop
+    - Vector: sel[0:2], f[0:5], SUM[15:0] (bit 0 is lsb, bit 15 is msb)
+
+module main (output, input1, input2, ...);
+    ===
+    ===
+    ===
+endmodule
+
+reserved word
+wire, and, nand, or, nor, xnor, not, buf
+
+GATE LEVEL MODELING
+module simple_circuit(F,A,B,C,D);
+    input A,B,C,D;
+    output F;
+    wire w1,w2,w3;
+
+    and G1(w1,A,B);
+    not G2(w2,D);
+    and G3(w3,C,w2);
+    and G4(F,w1,w3);
+endmodule
+
+TESTBENCH VERSION
+reg: input
+wire: output
+
+module sample_circuit_tb();
+    reg [2:0] t_input;
+    wire t_D, t_E;      // wire..output
+
+    sample_circuit dut(t_input[2], t_input[1], t_input[0], t_D, t_E);
+
+    initial begin
+
+        t_input = 3'b000;
+        repeat(7)
+            #50 t_input = t_input + 3'b001;
+    end
+
+    // Monitor block to observe outputs
+    initial begin
+        $monitor("time = %0d, t_input[2]= %b, t_input[1]= %b, t_input[0]= %b, D = %b, E = %b", $time, t_A, t_B, t_C, t_D, t_E);
+        $dumpfile("sample_circuit.vcd");  // Output file for waveform
+        $dumpvars(0, sample_circuit_tb);  // Dump all signals for waveform analysis
+    end
+endmodule
+
+module sample_circuit_tb();
+    reg [2:0] t_input;   // 3-bit wide input
+    wire t_D, t_E;        // Output wires
+    integer i;
+
+    sample_circuit dut(t_input[2], t_input[1], t_input[0], t_D, t_E);
+
+    initial begin
+        t_input = 3'b000; 
+        for(i = 0; i < 8; i = i + 1) begin  // Iterate through all 8 combinations of 3 bits
+            #50 t_input = i;  // Assign each combination to t_input
+        end
+    end
+
+    initial begin
+        $monitor("time = %0d, t_input[2]= %b, t_input[1]= %b, t_input[0]= %b, D = %b, E = %b", 
+                 $time, t_input[2], t_input[1], t_input[0], t_D, t_E);
+        $dumpfile("sample_circuit.vcd");  
+        $dumpvars(0, sample_circuit_tb);  
+    end
+endmodule
+
+
