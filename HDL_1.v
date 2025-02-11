@@ -1,3 +1,5 @@
+// GATE LEVEL MODELING
+
 module HDL_1 (input A, B, C, D, output F);
     wire AC, BC, CC, DC; 
     wire w1, w2, w3, w4, w5, w6, w7, w8, w9;
