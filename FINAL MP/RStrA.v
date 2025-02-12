@@ -1,3 +1,5 @@
+// Adler Clarence E. Strebel - S17
+
 `timescale 1ns / 1ps
 
 module HDL_1_dataflow (F,A,B,C,D);
