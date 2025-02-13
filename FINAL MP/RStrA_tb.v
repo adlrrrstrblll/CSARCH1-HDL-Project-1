@@ -11,7 +11,7 @@ module HDL_1_tb();
 
     initial begin
         t_input = 4'b0000;
-        for (i = 0; i <= 16; i = i + 1) 
+        for (i = 1; i <= 17; i = i + 1) 
         begin
             #10 t_input = i; 
         end
