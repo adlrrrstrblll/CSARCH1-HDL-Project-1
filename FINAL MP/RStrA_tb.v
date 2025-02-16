@@ -18,7 +18,7 @@ module HDL_1_tb();
     end
 
     initial begin
-        $display("Name & Section: Adler Clarence E. Strebel | CSARCH1 S17 | Dataflow");
+        $display("Name & Section: Adler Clarence E. Strebel | CSARCH1 S17");
         $display("Boolean Function: F(W,X,Y,Z)=W'X'Y'Z'+W'X'Y'Z+WX'Y'Z'+WX'Y'Z+WX'YZ'+WX'YZ+WXY'Z'+WXYZ'+WXYZ");
         $display("Sum of Minterm: F(W,X,Y,Z) = m(0,1,8,9,10,11,12,14,15)");
         $display("Verilog Model: Dataflow");
