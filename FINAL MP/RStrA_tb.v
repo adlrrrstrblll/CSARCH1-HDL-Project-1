@@ -25,7 +25,7 @@ module HDL_1_tb();
     end
 
     initial begin
-        $monitor("time = %0d \t A= %b, B= %b, C= %b, D= %b \t E (Output)= %b", 
+        $monitor("time = %0d \t A= %b, B= %b, C= %b, D= %b \t F (Output)= %b", 
                  $time, t_input[3], t_input[2], t_input[1], t_input[0], t_Output);
         $dumpfile("RStrA");  
         $dumpvars(0, HDL_1_tb); 
