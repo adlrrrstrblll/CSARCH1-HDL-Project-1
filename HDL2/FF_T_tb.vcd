@@ -1,0 +1,141 @@
+$date
+	Sun Apr 06 05:09:19 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module FF_T_tb $end
+$var wire 4 ! Q [3:0] $end
+$var reg 1 " Y $end
+$var reg 1 # clk $end
+$var reg 1 $ rst $end
+$scope module dut $end
+$var wire 1 " Y $end
+$var wire 1 # clk $end
+$var wire 1 $ rst $end
+$var reg 4 % Q [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b1 %
+0$
+0#
+0"
+b1 !
+$end
+#5
+1#
+#10
+0#
+1$
+#15
+b11 !
+b11 %
+1#
+#20
+0#
+#25
+b101 !
+b101 %
+1#
+#30
+0#
+#35
+b111 !
+b111 %
+1#
+#40
+0#
+#45
+b1001 !
+b1001 %
+1#
+#50
+0#
+#55
+b1011 !
+b1011 %
+1#
+#60
+0#
+#65
+b1101 !
+b1101 %
+1#
+#70
+0#
+#75
+b1111 !
+b1111 %
+1#
+#80
+0#
+#85
+b1 !
+b1 %
+1#
+#90
+0#
+1"
+#95
+b1111 !
+b1111 %
+1#
+#100
+0#
+#105
+b1101 !
+b1101 %
+1#
+#110
+0#
+#115
+b1011 !
+b1011 %
+1#
+#120
+0#
+#125
+b1001 !
+b1001 %
+1#
+#130
+0#
+#135
+b111 !
+b111 %
+1#
+#140
+0#
+#145
+b101 !
+b101 %
+1#
+#150
+0#
+#155
+b11 !
+b11 %
+1#
+#160
+0#
+#165
+b1 !
+b1 %
+1#
+#170
+0#
+#175
+b1111 !
+b1111 %
+1#
+#180
+0#
