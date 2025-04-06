@@ -27,10 +27,9 @@ module FF_T_tb();
     
     initial begin
         $display("Program by [Your Name], T FF with Odd Up-Down Counter");
-        $monitor("time=%03d, clk: %b, rst: %b, Y: %b, Q: %b (%d)",
-                 $time, t_clk, t_rst, t_Y, t_Q, t_Q);
+        $monitor("time=%d, clk:%b, rst:%b, Y:%b, Q:%b (%d)", $time, t_clk, t_rst, t_Y, t_Q, t_Q);
         $dumpfile("FF_T.vcd");
         $dumpvars();
     end
-    initial #195 $finish; //#200
+    initial #190 $finish;
 endmodule
